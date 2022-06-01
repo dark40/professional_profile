@@ -31,6 +31,9 @@ li {
     border-bottom: 3px solid lightskyblue;
 }
 
+header, main {
+    min-width: 560px;
+}
 
 header {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -100,7 +103,7 @@ header nav {
 }
 
 .content-elements {
-    width: 100%;
+    width: 90%;
     display: inline-flex;
     margin: 20px;
 }
@@ -118,13 +121,66 @@ header nav {
     width: 80%;
     padding: 10px;
     margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+
 }
 
 #about-me p {  
     color: #1b1f42;
 }
 
+#main-project img {
+    width:100%;
+    height:50%;
+    object-fit: cover;
+}
+
+.projects img{
+    width: 40%;
+    border: 3px solid lightskyblue;
+}
+
+h4, h6 {
+    background-color: lightskyblue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:#1b1f42;
+    position:relative; 
+    font-size:100%;
+    max-width: 16%;
+    left:0%;
+    bottom:60px;
+}
+
+
 
 #contact-me ul li a {
     color: #1b1f42;
 }
+
+#contact-me ul li a:hover {
+    background-color: #1b1f42;
+    color: lightskyblue;
+}
+
+@media screen and (max-width: 1000px) {
+    header h1, nav {
+      width:100%;
+      text-align: center;
+    }
+
+    .content-elements{
+        flex-direction: column;
+    }
+
+    .content-heading {
+        width:100%;
+        border-right: 0;
+        border-bottom: 3px solid #1b1f42;
+        text-align: left;
+    }
+
+    .content-main {
+        width:100%;
+    }
+  }
